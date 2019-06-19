@@ -1,0 +1,66 @@
+doctype html
+html lang=I18n.locale
+  head
+    meta charset=Rails.application.config.encoding
+    = stylesheet_link_tag 'application_vanacy', media: 'all'
+  body.vacancy-boby
+    #main-wrap
+      section.wrap.holder style="margin-top: 30px; margin-bottom: 30px;"
+
+        .h1-title Отлик на вакансию «BackEnd RoR разработчик»
+        .b-appeal.vacancy-b-appeal
+          .b-appeal-img = image_tag "/content/images/users/user_ico_vacancy.png"
+          .b-appeal-desc
+            .b-appeal--name Рычков Евгений Сергеевич
+            .b-appeal--text
+              p
+                ' Желаемая зп:
+                b 30000 ₽
+              p
+                ' E-mail:
+                b = mail_to "RichkovEvgeniy@mail.ru"
+              p
+                ' Telegram:
+                b EvgeniyR
+        .h2-title.vacancy-title
+          ' Навыки
+          small (отметить нужное или дополнить)
+
+        = form_for "form_name", method: :get, url: "#", html: {class: "b-form", id: "b-form-1"} do |f|
+          .vacancy-checkbox
+            = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'PostgreSQL'), OpenStruct.new(val: 'SQLite', checked: "1"), OpenStruct.new(val: 'другое')], :checked, :val, {checked: ["1"]}, {class: "f-field-check"}
+          .vacancy-checkbox
+            = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'mina'), OpenStruct.new(val: 'capistrano'), OpenStruct.new(val: 'другое')], :checked, :val, {checked: ["1"]}, {class: "f-field-check"}
+          .vacancy-checkbox
+            = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'slim'), OpenStruct.new(val: 'erb', checked: "1"), OpenStruct.new(val: 'другое')], :checked, :val, {checked: ["1"]}, {class: "f-field-check"}
+          .vacancy-checkbox
+            = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'coffescript'), OpenStruct.new(val: 'typescript'), OpenStruct.new(val: 'другое')], :checked, :val, {checked: ["1"]}, {class: "f-field-check"}
+          .vacancy-checkbox
+            = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'jQuery'), OpenStruct.new(val: 'vanilla js'), OpenStruct.new(val: 'другое')], :checked, :val, {checked: ["1"]}, {class: "f-field-check"}
+          .vacancy-checkbox
+            = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'scss'), OpenStruct.new(val: 'css', checked: "1"), OpenStruct.new(val: 'другое')], :checked, :val, {checked: ["1"]}, {class: "f-field-check"}
+          .vacancy-checkbox
+            = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'mac os'), OpenStruct.new(val: 'linux'), OpenStruct.new(val: 'другое')], :checked, :val, {checked: ["1"]}, {class: "f-field-check"}
+          .vacancy-checkbox
+            = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'RubyMine'), OpenStruct.new(val: 'SubLime', checked: "1"), OpenStruct.new(val: 'другое')], :checked, :val, {checked: ["1"]}, {class: "f-field-check"}
+
+          /div.b-checktree
+            ul.b-checktree-list
+              li.b-checktree--item
+                input#rcheckbox0.f-field-check.disable type="checkbox"
+                label for="rcheckbox0" Node 0
+              li.b-checktree--item
+                input#rcheckbox1.f-field-check.ffc-root type="checkbox"
+                label for="rcheckbox1" Node 1
+                ul.b-checktree-list
+                  li.b-checktree--item
+                    input#rcheckbox2.f-field-check.ffc-root type="checkbox"
+                    label for="rcheckbox2" Node 1.1
+                    ul.b-checktree-list
+                      li.b-checktree--item
+                        input#rcheckbox3.f-field-check type="checkbox"
+                        label for="rcheckbox3" Node 1.2
+        article.content
+          h2.vacancy-title Дополнительная информация
+          p Мне 32 года. Работал 1с программистом 9 лет. Хочу сменить направление деятельности.
+          p Прошел курс 100 часов: Ruby, Sinatra, Rails, sqlite3, ungit, rspec.
