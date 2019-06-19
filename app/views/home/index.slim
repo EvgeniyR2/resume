@@ -28,21 +28,21 @@ html lang=I18n.locale
 
         = form_for "form_name", method: :get, url: "#", html: {class: "b-form", id: "b-form-1"} do |f|
           .vacancy-checkbox
-            = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'PostgreSQL'), OpenStruct.new(val: 'SQLite', checked: "1"), OpenStruct.new(val: 'другое')], :checked, :val, {checked: ["1"]}, {class: "f-field-check"}
+            = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'PostgreSQL'), OpenStruct.new(val: 'SQLite', name: "1"), OpenStruct.new(val: 'другое')], :name, :val, {checked: ["1"]}, {class: "f-field-check"}
           .vacancy-checkbox
-            = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'mina'), OpenStruct.new(val: 'capistrano'), OpenStruct.new(val: 'другое')], :checked, :val, {checked: ["1"]}, {class: "f-field-check"}
+            = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'mina'), OpenStruct.new(val: 'capistrano'), OpenStruct.new(val: 'другое')], :name, :val, {checked: ["1"]}, {class: "f-field-check"}
           .vacancy-checkbox
-            = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'slim'), OpenStruct.new(val: 'erb', checked: "1"), OpenStruct.new(val: 'другое')], :checked, :val, {checked: ["1"]}, {class: "f-field-check"}
+            = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'slim'), OpenStruct.new(val: 'erb', name: "1"), OpenStruct.new(val: 'другое')], :name, :val, {checked: ["1"]}, {class: "f-field-check"}
           .vacancy-checkbox
-            = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'coffescript'), OpenStruct.new(val: 'typescript'), OpenStruct.new(val: 'другое')], :checked, :val, {checked: ["1"]}, {class: "f-field-check"}
+            = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'coffescript'), OpenStruct.new(val: 'typescript'), OpenStruct.new(val: 'другое')], :name, :val, {checked: ["1"]}, {class: "f-field-check"}
           .vacancy-checkbox
-            = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'jQuery'), OpenStruct.new(val: 'vanilla js'), OpenStruct.new(val: 'другое')], :checked, :val, {checked: ["1"]}, {class: "f-field-check"}
+            = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'jQuery'), OpenStruct.new(val: 'vanilla js'), OpenStruct.new(val: 'другое')], :name, :val, {checked: ["1"]}, {class: "f-field-check"}
           .vacancy-checkbox
-            = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'scss'), OpenStruct.new(val: 'css', checked: "1"), OpenStruct.new(val: 'другое')], :checked, :val, {checked: ["1"]}, {class: "f-field-check"}
+            = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'scss'), OpenStruct.new(val: 'css', name: "1"), OpenStruct.new(val: 'другое')], :name, :val, {checked: ["1"]}, {class: "f-field-check"}
           .vacancy-checkbox
-            = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'mac os'), OpenStruct.new(val: 'linux'), OpenStruct.new(val: 'другое')], :checked, :val, {checked: ["1"]}, {class: "f-field-check"}
+            = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'mac os'), OpenStruct.new(val: 'linux'), OpenStruct.new(val: 'другое')], :name, :val, {checked: ["1"]}, {class: "f-field-check"}
           .vacancy-checkbox
-            = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'RubyMine'), OpenStruct.new(val: 'SubLime', checked: "1"), OpenStruct.new(val: 'другое')], :checked, :val, {checked: ["1"]}, {class: "f-field-check"}
+            = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'RubyMine'), OpenStruct.new(val: 'SubLime', name: "1"), OpenStruct.new(val: 'другое')], :name, :val, {checked: ["1"]}, {class: "f-field-check"}
 
           /div.b-checktree
             ul.b-checktree-list
